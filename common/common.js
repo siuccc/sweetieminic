@@ -72,14 +72,15 @@ function formatDateKey(date) {
 
 // 通用日期显示初始化
 function initializeDateDisplay() {
-    const today = new Date();
+    // 固定显示8月5日
+    const fixedDate = new Date(2025, 7, 5); // 月份从0开始，所以7代表8月
     const options = { 
         year: 'numeric', 
         month: 'long', 
         day: 'numeric',
         weekday: 'long'
     };
-    const dateString = today.toLocaleDateString('zh-CN', options);
+    const dateString = fixedDate.toLocaleDateString('zh-CN', options);
     
     const todayDateElement = document.getElementById('todayDate');
     if (todayDateElement) {
@@ -119,12 +120,12 @@ function showDatePicker() {
 
 // 跳转到今日页面
 function goToTodayPage() {
-    const today = new Date();
-    const dateKey = formatDateKey(today);
+    // 固定跳转到8月5日
+    const fixedDateKey = '2025-08-05';
     // 判断当前页面位置来决定跳转路径
     const isInDaily = window.location.pathname.includes('/daily/');
     const basePath = isInDaily ? './' : 'daily/';
-    window.location.href = `${basePath}${dateKey}.html`;
+    window.location.href = `${basePath}${fixedDateKey}.html`;
 }
 
 // 返回主页
