@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minic的甜蜜小站 💕</title>
+    <!-- 通用样式 -->
+    <link rel="stylesheet" href="common/common.css">
+    <!-- 主页专用样式 -->
+    <link rel="stylesheet" href="common/index.css">
+</head>
+<body>
+    <!-- 飘浮的爱心装饰 -->
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">💝</div>
+        <div class="heart">🌸</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="container">
+        <!-- 标题区域 -->
+        <header class="header">
+            <h1 class="title">minic的甜蜜小站</h1>
+            <p class="subtitle">炸鸡腿为你精心制作 💕</p>
+        </header>
+
+        <!-- 中央文字展示区域 -->
+        <main class="main-content">
+            <div class="sweet-message">
+                <h2 class="greeting">minic，你好呀！</h2>
+                <p class="love-text">
+                    这是炸鸡腿为你制作的专属网站<br>
+                    希望你看到能开心一点吧o(╥﹏╥)o 🥰
+                </p>
+            </div>
+
+            <!-- 音频播放区域 -->
+            <div class="audio-section">
+                <button class="audio-btn" id="playBtn" onclick="toggleAudio()">
+                    <span class="btn-icon">🎵</span>
+                    <span class="btn-text">音乐播放中...</span>
+                </button>
+                <audio id="loveAudio" preload="auto" loop>
+                    <source src="audio/split.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+                <p class="audio-note">🎶 你和我就像是豆浆油条</p>
+            </div>
+
+            <!-- 每日情话导航区域 -->
+            <div class="daily-love-section">
+                <h3 class="daily-title">💕 炸鸡腿的每日情话 💕</h3>
+                <p class="daily-subtitle">点击日期查看当天想对你说的话</p>
+                <div class="date-calendar">
+                    <div class="current-date" id="currentDate" onclick="goToTodayPage()">
+                        <span class="date-icon">📅</span>
+                        <span class="date-text">今天的话</span>
+                        <span class="date-value" id="todayDate"></span>
+                    </div>
+                    <div class="date-navigation" style="display: none;">
+                        <button class="nav-btn" onclick="showDatePicker()">
+                            <span>📖</span>
+                            查看其他日期
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部可爱图片区域 -->
+        <footer class="footer">
+            <div class="image-container">
+                <img class="cute-image" src="images/webwxgetmsgimg.jfif" alt="一只好可爱的小兔子">
+                <p class="image-caption">💕 小兔子好喜欢你哦</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="common/common.js"></script>
+    <script src="common/audio.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

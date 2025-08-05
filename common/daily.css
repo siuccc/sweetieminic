@@ -1,0 +1,234 @@
+/* 每日情话页面专用样式 */
+
+/* 返回按钮 */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #d16ba5;
+    border: 2px solid rgba(255, 182, 193, 0.6);
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(220, 170, 255, 0.2);
+}
+
+.back-btn:hover {
+    background: rgba(255, 182, 193, 0.2);
+    border-color: #ff8cc8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 170, 255, 0.3);
+}
+
+/* 日期标题区域 */
+.daily-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.date-title {
+    font-size: 2.8rem;
+    color: #d16ba5;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.date-subtitle {
+    font-size: 1.2rem;
+    color: #ff8cc8;
+    letter-spacing: 1px;
+}
+
+/* 每日内容区域 */
+.daily-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 情书样式 */
+.love-letter {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 40px rgba(220, 170, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 182, 193, 0.3);
+}
+
+.letter-header h2 {
+    font-size: 1.8rem;
+    color: #d16ba5;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.letter-time {
+    color: #999;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.letter-body {
+    text-align: left;
+}
+
+.greeting-line {
+    margin-bottom: 25px;
+}
+
+.dear {
+    font-size: 1.2rem;
+    color: #d16ba5;
+    font-weight: 500;
+}
+
+.content-paragraphs {
+    margin-bottom: 30px;
+}
+
+.love-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-indent: 2em;
+    letter-spacing: 0.5px;
+}
+
+.highlight {
+    color: #ff8cc8;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.special-message {
+    background: linear-gradient(45deg, #ff9a8b, #ffeaa7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.love-you {
+    color: #ff8cc8;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.signature-name {
+    color: #d16ba5;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.signature-date {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* 特别区域样式 */
+.daily-memory, .tomorrow-wish {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 25px rgba(220, 170, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.memory-title, .wish-title {
+    font-size: 1.3rem;
+    color: #d16ba5;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.memory-content, .wish-content {
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .daily-header {
+        padding: 60px 15px 30px;
+    }
+    
+    .date-title {
+        font-size: 2.2rem;
+    }
+    
+    .date-subtitle {
+        font-size: 1rem;
+    }
+    
+    .daily-content {
+        padding: 0 15px;
+    }
+    
+    .love-letter {
+        padding: 25px 20px;
+    }
+    
+    .daily-memory, .tomorrow-wish {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-title {
+        font-size: 1.8rem;
+    }
+    
+    .love-letter {
+        padding: 20px 15px;
+    }
+    
+    .love-paragraph {
+        font-size: 1rem;
+        text-indent: 1.5em;
+    }
+    
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年8月5日 - 今天想对minic说的话 💕</title>
+    <!-- 通用样式 -->
+    <link rel="stylesheet" href="../common/common.css">
+    <!-- 每日页面专用样式 -->
+    <link rel="stylesheet" href="../common/daily.css">
+</head>
+<body>
+    <!-- 飘浮的爱心装饰 -->
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">💝</div>
+        <div class="heart">🌸</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="container">
+        <!-- 返回按钮 -->
+        <div class="back-button">
+            <button onclick="goBack()" class="back-btn">
+                <span>🏠</span>
+                返回主页
+            </button>
+        </div>
+
+        <!-- 日期标题 -->
+        <header class="daily-header">
+            <h1 class="date-title">2025年8月5日</h1>
+            <p class="date-subtitle">星期二 💕 炸鸡腿想对minic说的话</p>
+        </header>
+
+        <!-- 每日情话内容 -->
+        <main class="daily-content">
+            <div class="love-letter">
+                <div class="letter-header">
+                    <h2>💌 </h2>
+                </div>
+                
+                <div class="letter-body">
+                    <div class="greeting-line">
+                        <span class="dear">亲爱的minic：</span>
+                    </div>
+                    
+                    <div class="content-paragraphs">
+                        <p class="love-paragraph">
+                            今天是我们在一起的第<span class="highlight">272</span>天
+                            💕
+                        </p>
+                        
+                        <p class="love-paragraph">
+                            其实这个东西做的好匆忙好匆忙，本来想着你还没好的话，我给你说的话的内容是不同的
+                            ，我一会分两个版本给你讲讲吧
+                        </p>
+                        
+                        <p class="love-paragraph">
+                            你看到的时候肯定超过十二点了o(╥﹏╥)o，有些显示的日期不准，不要在意这些细节，
+                            然后这个东西可能会有些bug，但应该不是特别影响
+                        </p>
+                        
+                        <p class="love-paragraph">
+                            <span class="special-message">今天也超级超级想你哦姐姐</span>
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="signature">
+                        <p class="signature-name">炸鸡腿 💖</p>
+                        <p class="signature-date">写于 2025年8月5日</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 当日特别回忆 -->
+            <div class="daily-memory">
+                <h3 class="memory-title">🌟本来呢我想的是你还没好，那我本来想说的是： </h3>
+                <div class="memory-content">
+                    <p>很遗憾今天没把你哄好，甚至还让你更生气了，对不起姐姐。然后我写的不是说你没有哄我没有让着我，我只是想说当时想让你多哄哄我让让我😭💕</p>
+                    <p>然后就是我说你看了这个也许会好一点儿吧也可能不会，那我肯定也没法哄你睡觉，我就想等会录个音讲故事放在这里，你就能听着睡觉了🥰</p>
+                    <p>然后本来想说不让你去找小金人了，结果你已经找完了，姐姐好棒，辛苦姐姐了💙</p>
+                </div>
+            </div>
+
+            <!-- 明日期待 -->
+            <div class="tomorrow-wish">
+                <h3 class="wish-title">🌈</h3>
+                <div class="wish-content">
+                    <p>没想到姐姐主动找我说话了😋但还是对不起姐姐，我怎么会不要你呢，我也真没想骂你的，对不起姐姐 ✨
+                        你怎么直接穿我的睡衣啊，不怕被你妈发现吗
+                    </p>
+                    <p>然后你明天还要早起去上课，今晚要早点睡🥺</p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 隐藏的音频元素 -->
+        <audio id="dailyAudio" preload="auto" loop>
+            <source src="../audio/split.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放
+        </audio>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../common/common.js"></script>
+    <script src="../common/audio.js"></script>
+    <script>
+        // 页面加载完成后初始化音频
+        document.addEventListener('DOMContentLoaded', function() {
+            // 使用公共音频模块初始化
+            initializeAudioPlayer('dailyAudio', '../audio/split.mp3', 0.7);
+        });
+
+        // 欢迎消息
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                showMessage('💕 这是炸鸡腿今天想对你说的话，记得点一下屏幕哦');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

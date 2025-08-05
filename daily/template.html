@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{DATE}} - 今天想对minic说的话 💕</title>
+    <!-- 通用样式 -->
+    <link rel="stylesheet" href="../common/common.css">
+    <!-- 每日页面专用样式 -->
+    <link rel="stylesheet" href="../common/daily.css">
+</head>
+<body>
+    <!-- 飘浮的爱心装饰 -->
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">💝</div>
+        <div class="heart">🌸</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="container">
+        <!-- 返回按钮 -->
+        <div class="back-button">
+            <button onclick="goBack()" class="back-btn">
+                <span>🏠</span>
+                返回主页
+            </button>
+        </div>
+
+        <!-- 日期标题 -->
+        <header class="daily-header">
+            <h1 class="date-title">[完整日期，如：2025年8月6日]</h1>
+            <p class="date-subtitle">[星期几] 💕 炸鸡腿想对minic说的话</p>
+        </header>
+
+        <!-- 每日情话内容 -->
+        <main class="daily-content">
+            <div class="love-letter">
+                <div class="letter-header">
+                    <h2>💌 今天的甜蜜话语</h2>
+                </div>
+                
+                <div class="letter-body">
+                    <div class="greeting-line">
+                        <span class="dear">亲爱的minic：</span>
+                    </div>
+                    
+                    <div class="content-paragraphs">
+                        <!-- 在这里写今天想说的话，可以有多个段落 -->
+                        <p class="love-paragraph">
+                            [写下今天第一段想说的话...]
+                        </p>
+                        
+                        <p class="love-paragraph">
+                            [写下今天第二段想说的话...]
+                        </p>
+                        
+                        <p class="love-paragraph">
+                            [可以继续添加更多段落...]
+                        </p>
+                        
+                        <p class="love-paragraph">
+                            今天特别想告诉你：
+                            <span class="special-message">[今天最想强调的特别话语]</span>
+                        </p>
+                    </div>
+                    
+                    <div class="signature">
+                        <p class="love-you">永远爱你的</p>
+                        <p class="signature-name">炸鸡腿 💖</p>
+                        <p class="signature-date">写于 [具体日期]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 当日特别回忆 -->
+            <div class="daily-memory">
+                <h3 class="memory-title">🌟 今日特别回忆</h3>
+                <div class="memory-content">
+                    <p>[写下今天想起的特别回忆，比如你们一起做过的事情...]</p>
+                </div>
+            </div>
+
+            <!-- 明日期待 -->
+            <div class="tomorrow-wish">
+                <h3 class="wish-title">🌈 对明天的期待</h3>
+                <div class="wish-content">
+                    <p>[写下对明天的期待和祝愿...]</p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 隐藏的音频元素 -->
+        <audio id="dailyAudio" preload="auto" loop>
+            <source src="../audio/split.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放
+        </audio>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../common/common.js"></script>
+    <script src="../common/audio.js"></script>
+    <script>
+        // 页面加载完成后初始化音频
+        document.addEventListener('DOMContentLoaded', function() {
+            // 使用公共音频模块初始化
+            initializeAudioPlayer('dailyAudio', '../audio/split.mp3', 0.7);
+        });
+
+        // 欢迎消息
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                showMessage('💕 这是炸鸡腿今天想对你说的话，记得点一下屏幕哦');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

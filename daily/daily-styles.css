@@ -1,0 +1,308 @@
+/* 每日情话页面专用样式 */
+
+/* 返回按钮 */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #d16ba5;
+    border: 2px solid rgba(255, 182, 193, 0.6);
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(220, 170, 255, 0.2);
+}
+
+.back-btn:hover {
+    background: rgba(255, 182, 193, 0.2);
+    border-color: #ff8cc8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 170, 255, 0.3);
+}
+
+/* 日期标题区域 */
+.daily-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.date-title {
+    font-size: 2.8rem;
+    color: #d16ba5;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.date-subtitle {
+    font-size: 1.2rem;
+    color: #a855f7;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* 每日内容区域 */
+.daily-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* 情书样式 */
+.love-letter {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(220, 170, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.love-letter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffc9da, #e0c3fc, #ffc9da);
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 182, 193, 0.3);
+    padding-bottom: 20px;
+}
+
+.letter-header h2 {
+    font-size: 1.8rem;
+    color: #d16ba5;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.letter-time {
+    color: #a855f7;
+    font-size: 1rem;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.letter-body {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.greeting-line {
+    margin-bottom: 20px;
+}
+
+.dear {
+    font-size: 1.3rem;
+    color: #d16ba5;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.content-paragraphs {
+    margin-bottom: 30px;
+}
+
+.love-paragraph {
+    margin-bottom: 20px;
+    color: #8b5a7a;
+    text-indent: 2em;
+    position: relative;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #ffc9da, #e0c3fc);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.special-message {
+    background: rgba(255, 182, 193, 0.2);
+    padding: 8px 12px;
+    border-radius: 15px;
+    border-left: 4px solid #ff8cc8;
+    display: inline-block;
+    font-weight: 500;
+    color: #d16ba5;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.love-you {
+    font-size: 1rem;
+    color: #a855f7;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.signature-name {
+    font-size: 1.2rem;
+    color: #d16ba5;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.signature-date {
+    font-size: 0.9rem;
+    color: #a855f7;
+    opacity: 0.7;
+}
+
+/* 特别回忆和明日期待 */
+.daily-memory, .tomorrow-wish {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 25px rgba(220, 170, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.memory-title, .wish-title {
+    font-size: 1.4rem;
+    color: #d16ba5;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.memory-content, .wish-content {
+    color: #8b5a7a;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+    font-style: italic;
+}
+
+/* 导航区域 */
+.daily-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-daily-btn {
+    background: linear-gradient(45deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(220, 170, 255, 0.3);
+}
+
+.nav-daily-btn:hover {
+    background: linear-gradient(45deg, #a6c1ee 0%, #fbc2eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(220, 170, 255, 0.4);
+}
+
+.nav-daily-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .date-title {
+        font-size: 2.2rem;
+    }
+    
+    .love-letter {
+        padding: 30px 25px;
+        margin: 0 10px 25px;
+    }
+    
+    .daily-memory, .tomorrow-wish {
+        margin: 0 10px 20px;
+        padding: 20px;
+    }
+    
+    .daily-navigation {
+        padding: 0 10px;
+        gap: 15px;
+    }
+    
+    .nav-daily-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .daily-header {
+        padding: 70px 15px 30px;
+    }
+    
+    .date-title {
+        font-size: 1.8rem;
+    }
+    
+    .love-letter {
+        padding: 25px 20px;
+    }
+    
+    .letter-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .love-paragraph {
+        text-indent: 1em;
+        font-size: 1rem;
+    }
+    
+    .daily-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-daily-btn {
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .back-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
