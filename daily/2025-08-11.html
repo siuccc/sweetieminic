@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年8月11日 - minic的甜蜜小站 💕</title>
+    <!-- 通用样式 -->
+    <link rel="stylesheet" href="../common/common.css">
+    <!-- 每日页面专用样式 -->
+    <link rel="stylesheet" href="daily-styles.css">
+    <!-- 8月11日特别样式 -->
+    <style>
+        /* 特别日期样式 */
+        .special-date .date-badge {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 300% 300%;
+            animation: gradient-shift 3s ease infinite;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .special-date .date-heading.animated {
+            animation: bounce-in 1s ease-out;
+        }
+        
+        @keyframes bounce-in {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .special-date .date-subtitle.glow {
+            text-shadow: 0 0 10px rgba(240, 147, 251, 0.6);
+            animation: glow-pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow-pulse {
+            from { text-shadow: 0 0 10px rgba(240, 147, 251, 0.4); }
+            to { text-shadow: 0 0 20px rgba(240, 147, 251, 0.8); }
+        }
+        
+        /* 多层消息样式 */
+        .special-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .midnight-card {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            border-left: 5px solid #34495e;
+        }
+        
+        .morning-card {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-left: 5px solid #e17055;
+        }
+        
+        .afternoon-card {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            border-left: 5px solid #0984e3;
+        }
+        
+        .placeholder-message {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+        }
+        
+        .placeholder-message::before {
+            content: "";
+        }
+        
+        .evening-card.special-glow {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 50%, #e84393 100%);
+            border: 2px solid rgba(240, 147, 251, 0.5);
+            box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .evening-card.special-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .special-tag {
+            background: #e84393;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        
+        .special-text .highlight {
+            color: #e84393;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(232, 67, 147, 0.3);
+        }
+        
+        .rainbow-text {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 2s ease-in-out infinite;
+            font-weight: bold;
+        }
+        
+        @keyframes rainbow-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .heart-animation {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .floating-heart {
+            animation: float-hearts 2s ease-in-out infinite;
+            font-size: 1.2em;
+        }
+        
+        .floating-heart:nth-child(1) { animation-delay: 0s; }
+        .floating-heart:nth-child(2) { animation-delay: 0.7s; }
+        .floating-heart:nth-child(3) { animation-delay: 1.4s; }
+        
+        @keyframes float-hearts {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.2); }
+        }
+        
+        /* 增强装饰元素 */
+        .decorative-elements.enhanced {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .decorative-elements.enhanced .sparkle {
+            position: absolute;
+            animation: sparkle-dance 4s infinite linear;
+        }
+        
+        .sparkle.big { font-size: 2em; animation-duration: 6s; }
+        .sparkle.medium { font-size: 1.5em; animation-duration: 4s; }
+        .sparkle.small { font-size: 1em; animation-duration: 3s; }
+        
+        .sparkle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+        .sparkle:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+        .sparkle:nth-child(4) { top: 60%; right: 10%; animation-delay: 3s; }
+        .sparkle:nth-child(5) { bottom: 15%; right: 25%; animation-delay: 4s; }
+        
+        @keyframes sparkle-dance {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg) scale(1); 
+                opacity: 0.7; 
+            }
+            25% { 
+                transform: translateY(-20px) rotate(90deg) scale(1.2); 
+                opacity: 1; 
+            }
+            50% { 
+                transform: translateY(0px) rotate(180deg) scale(0.8); 
+                opacity: 0.5; 
+            }
+            75% { 
+                transform: translateY(-10px) rotate(270deg) scale(1.1); 
+                opacity: 0.9; 
+            }
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .special-layout {
+                gap: 15px;
+            }
+            
+            .sparkle.big { font-size: 1.5em; }
+            .sparkle.medium { font-size: 1.2em; }
+            .sparkle.small { font-size: 0.9em; }
+        }
+        
+        /* 特殊页面导航按钮优化 */
+        .daily-header .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .daily-header .nav-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .daily-header .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .daily-header .nav-btn:hover::before {
+            left: 100%;
+        }
+        
+        .daily-header .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .daily-header .back-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+        }
+        
+        .daily-header .back-btn:hover {
+            box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+        }
+        
+        .daily-header .date-btn {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+        
+        .daily-header .date-btn:hover {
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+        }
+        
+        .daily-header .nav-btn span {
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 飘浮的爱心装饰 -->
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">💝</div>
+        <div class="heart">🌸</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="container">
+        <!-- 返回导航 -->
+        <header class="daily-header">
+            <div class="nav-buttons">
+                <button class="nav-btn back-btn" onclick="goBack()">
+                    <span>🏠</span>
+                    返回主页
+                </button>
+                <button class="nav-btn date-btn" onclick="showDatePicker()">
+                    <span>📅</span>
+                    选择日期
+                </button>
+            </div>
+        </header>
+
+        <!-- 日期标题 -->
+        <div class="date-title special-date">
+            <h1 class="date-heading animated">2025年8月11日</h1>
+            <p class="date-subtitle glow">炸鸡腿想对minic说的话 💕</p>
+        </div>
+
+        <!-- 多层情话内容区域 -->
+        <main class="love-content special-layout">
+            <!-- 第一条消息 - 凌晨 -->
+            <div class="message-card midnight-card">
+                <div class="message-header">
+                    <span class="sender">炸鸡腿</span>
+                    <span class="time">凌晨 🌌</span>
+                </div>
+                <div class="message-body">
+                    <p class="love-message">
+                        唔 已经过了十二点了 所以本该在10号写的只能放在这了 不然页面修改好麻烦<br><br>
+                        
+                        emmmm不知道你睡没睡<br>
+                        怎么说呢 想必我们大家都不是很开心 💕<br><br>
+                        晚上和舅妈还有哥哥一起吃饭了 他们老问我有关你的 我大概也能感觉到当时过年你姑妈问你的时候的感受了吧哈哈哈哈<br>
+                        然后吃的是西餐 其实感觉一般般 但是好贵好贵 我又发现了一家寿司郎 但我哥说摩打食堂比寿司郎好吃诶 真神奇<br>
+                        
+                        
+                        也不知道你会不会点开这里来看看我给你写了什么<br>
+                        没关系 没点开也没事 那我就大胆的随便说了<br><br>
+                        
+                        知道你上课很累 前段时间我上班深有体会 诶我也不知道我想说什么 也许不应该在你很累的时候这么对你 前段时间感受过也确实不好受 那我先说对不起<br>
+                        没关系 感觉大家可能都没心情说话了 那就先这样吧✨<br><br>
+                        没关系 趁你看不到 我想告诉你我真的好想你 也许如果不异地就不会这样了吧 快点见面吧快点见面吧😭😭😭
+                        
+                    </p>
+                </div>
+            </div>
+
+            <!-- 第二条消息 - 早上（待补充） -->
+            <div class="message-card morning-card">
+                <div class="message-header">
+                    <span class="sender">炸鸡腿</span>
+                    <span class="time">早上 ☀️</span>
+                </div>
+                <div class="message-body">
+                    <p class="love-message placeholder-message"></p>
+                </div>
+            </div>
+
+            <!-- 第三条消息 - 午间（待补充） -->
+            <div class="message-card afternoon-card">
+                <div class="message-header">
+                    <span class="sender">炸鸡腿</span>
+                    <span class="time">中午 🌤️</span>
+                </div>
+                <div class="message-body">
+                    <p class="love-message placeholder-message"></p>
+                </div>
+            </div>
+
+            <!-- 第四条消息 - 晚上（待补充） -->
+            <div class="message-card evening-card special-glow">
+                <div class="message-header">
+                    <span class="sender">炸鸡腿</span>
+                    <span class="time">晚上 🌙</span>
+                </div>
+                <div class="message-body">
+                    <p class="love-message special-text placeholder-message"></p>
+                </div>
+                <div class="message-footer special-footer">
+                    <span class="love-signature rainbow-text">💖 炸鸡腿 💖</span>
+                    <div class="heart-animation">
+                        <span class="floating-heart">💕</span>
+                        <span class="floating-heart">💖</span>
+                        <span class="floating-heart">💗</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 装饰元素增强版 -->
+            <div class="decorative-elements enhanced">
+                <div class="sparkle big">✨</div>
+                <div class="sparkle medium">💫</div>
+                <div class="sparkle small">⭐</div>
+                <div class="sparkle big">🌟</div>
+                <div class="sparkle medium">💎</div>
+            </div>
+        </main>
+
+        <!-- 底部可爱图片区域 -->
+        <footer class="daily-footer">
+            <div class="image-container">
+                <div class="cute-quote">
+                    <p>"没关系你不乐意更不更了 我自己更 日记你不写就不写了吧 你应该以为我也不写吧 其实我都写这了 💕"</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../common/common.js"></script>
+    <script src="daily-script.js"></script>
+</body>
+</html>
